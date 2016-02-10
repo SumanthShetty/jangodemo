@@ -1,0 +1,22 @@
+<marquee> user login</marquee>
+{% if error_message %}<p style="color: red;"><strong>{{ error_message }}</strong></p>{% endif %}
+<form action="{% url 'question:index' %}" method="get">
+<table align='center'>
+  <tr>
+    <td> ENTER THE NAME </td>
+    <td> <input type="text" name="user"/></td>
+   </tr>
+  <tr>
+  <tr>
+    <td> ENTER THE USERNAME </td>
+    <td> <input type="text" name="email"/></td>
+   </tr>
+  <tr>
+    <td> ENTER THE PASSWORD </td>
+    <td> <input type="password" name="password"/></td>
+   </tr>
+   <tr> 
+      <td> <input type="submit" name="submit"/></td>
+    </tr>
+</table>
+</form>

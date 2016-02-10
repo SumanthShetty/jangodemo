@@ -1,0 +1,29 @@
+<h1> hello</h1>
+<form action="{% url 'answer:index' %}" method="get">
+<table align='center'>
+<tr>
+	<td>USER NAME </td>
+        <td><input type="text" name="user" value="{{user}}"/></td>
+</tr>
+<tr>
+	<td>QUESTION TITLE </td>
+	<td><input type="text" name="q_title"/></td>
+</tr> 
+<tr>
+	<td>QUESTION BODY </td>
+	<td><textarea name="q_body"></textarea></td>
+</tr> 
+<tr><td>{% for tag in ta %}
+    <input type="radio" name="tag" id="tag{{ forloop.counter }}" value="{{ tag.id }}" />
+    <label for="tag{{ forloop.counter }}">{{ tag.tag_name }}</label><br />
+{% endfor %}</td>
+</tr> 
+<tr>
+	<td>POINT </td>
+	<td><input type="text" name="points"/></td>
+</tr> 
+<tr>
+	
+	<td><input type="submit" value="submit"/></td>
+</tr> 
+</form>
